@@ -16,8 +16,8 @@ struct ImageFlow: View {
       FlowLayout(horizontalSpacing: spacing, verticalSpacing: spacing) {
         ForEach(self.items, id: \.self) { item in
           switch item.value {
-          case .image(let data):
-            ImageView(data: data)
+          case .image:
+            EmptyView()
           case .lineBreak:
             Spacer()
           }
